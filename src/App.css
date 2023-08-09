@@ -33,6 +33,38 @@ body {
   width: 90px;
   height: 90px;
 }
+.square-first .square:nth-child(1) {
+  border-top: none;
+  border-left: none;
+}
+.square-first .square:nth-child(2) {
+  border-top: none;
+}
+.square-first .square:nth-child(3) {
+  border-top: none;
+  border-right: none;
+}
+
+.square-second .square:nth-child(1) {
+  border-left: none;
+}
+
+.square-second .square:nth-child(3) {
+  border-right: none;
+}
+
+.square-third .square:nth-child(1) {
+  border-left: none;
+  border-bottom: none;
+}
+.square-third .square:nth-child(2) {
+  border-bottom: none;
+}
+.square-third .square:nth-child(3) {
+  border-right: none;
+  border-bottom: none;
+}
+
 .board {
   width: 275px;
   height: 275px;
@@ -41,4 +73,46 @@ body {
   clear: both;
   content: '';
   display: table;
+}
+.status {
+  margin-top: 20px;
+  color: whitesmoke;
+  text-shadow: 1px 1px 4px #343434;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+.jump-to {
+  margin-top: 5px;
+  text-align: left;
+}
+.jump-to > a {
+  background: transparent; 
+  border-bottom: 1px solid transparent;
+  color: #343434;
+  cursor: pointer;
+  transition: all .7s ease;
+}
+.jump-to > a:hover {
+  border-bottom: 1px solid #708090;
+  transition: all .7s ease;
+  color: #708090;
+}
+.reset-button {
+  margin-top: 20px;
+  background: transparent; 
+  cursor: pointer;
+  height: 30px;
+  width: 100%;
+  border-radius: 4px;
+  border: 3px solid #5edab1c2;
+  color: #45a283;
+  font-weight: bold;
+  transition: all .7s ease;
+  font-size: 18px;
+}
+.reset-button:hover {
+  background: rgba(245, 245, 245, 0.344); 
+  transition: all .4s ease;
+  font-size: 16px;
 }
