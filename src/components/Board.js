@@ -2,9 +2,7 @@ import { useState } from 'react';
 
 import Square from "./Square"
 
-export default function Board() {
-  const [xIsNext, setXIsNext] = useState(true);
-  const [squares, setSquares] = useState(Array(9).fill(null));
+export default function Board({ xIsNext, squares, onPlay }) {
 
   function handleClick(i) {
     // check to see if the square already has a X or an O and check by the winner
@@ -14,8 +12,7 @@ export default function Board() {
     // if yes, you won't pass to go on by the code 
     const nextSquares = squares.slice();  
     nextSquares[i] = xIsNext ? 'X' : 'O';
-    setSquares(nextSquares);
-    setXIsNext(!xIsNext);
+    onPlay(nextSquares);
   }
 
   const winner = calculateWinner(squares);
