@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <h1>Tic-Tac-Toe game</h1>
       <Game />
-      <footer>Implemented in the React library with JS.</footer>
+      <footer><p>Implemented in the React library with JS.</p></footer>
     </div>
   );
 }

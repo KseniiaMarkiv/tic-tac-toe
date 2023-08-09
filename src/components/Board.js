@@ -15,7 +15,11 @@ export default function Board({ xIsNext, squares, onPlay, onReset }) {
   }
 
   const winner = calculateWinner(squares);
-  const status = winner ? "Winner: " + winner : "Next player: " + (xIsNext ? "X" : "O");
+  let status = winner
+      ? winner + " Winner"
+      : !squares.includes(null)
+        ? "Tie"
+        : "Next player: " + (xIsNext ? "X" : "O");
 
 
   return (

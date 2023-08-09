@@ -25,6 +25,8 @@ body {
 }
 h1 {
   color: #ffffff89;
+  animation: 1.5s shaking-color ease infinite;
+
 }
 .board-section {
   display: flex;
@@ -160,6 +162,24 @@ footer {
   text-align: left;
   font-family: 'Borel', cursive;
   font-size: 13x;
-  color: #708090;
   margin-top: 30px;
+}
+footer p {
+  position: relative;
+  animation: 8s anim-color ease infinite;
+}
+
+@keyframes anim-color {
+  0%   {color: rgb(230, 101, 101);}
+  25%  {color: rgb(213, 213, 104);}
+  50%  {color: rgb(85, 85, 208);}
+  100% {color: rgb(87, 192, 87);}
+}
+
+@keyframes shaking-color {
+  0% { transform: rotate(0deg); scale: 1; }
+  25% { transform: rotate(2deg); scale: 1; }
+  20% { transform: rotate(0eg); scale: 1.1; }
+  75% { transform: rotate(-2deg); scale: 1; }
+  100% { transform: rotate(0deg); scale: 1; }
 }
