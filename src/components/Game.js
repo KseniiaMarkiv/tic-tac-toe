@@ -30,21 +30,20 @@ export default function Game() {
     let description = move > 0 ? 'Go to move #' + move : 'Go to game start';
 
     return (
-      <ol className='jump-to' key={move}>
+      <p className='jump-to' key={move}>
         <a onClick={() => jumpTo(move)}>{description}</a>
-      </ol>
+      </p>
     );
   });
 
   return (
     <>
-      <h1>Game component</h1>
       <div className="game">
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} onReset={handleReset} />
       </div>
       <div className="game-info">
-        <ol>{moves}</ol>
+        <div>{moves}</div>
       </div>
     </div>
     </>

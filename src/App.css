@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -6,17 +8,23 @@ body {
   font-family: sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: #7FFFD4;
+  background-color: #12053c;
+  color: #343434;
 }
 
 .App {
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
+  align-content: stretch;
+  flex-wrap: wrap;
   height: 100svh;
   width: 100svw;
+}
+h1 {
+  color: #ffffff89;
 }
 .board-section {
   display: flex;
@@ -32,6 +40,11 @@ body {
   font-weight: bold;
   width: 90px;
   height: 90px;
+  transition: all .7s ease;
+}
+.square:hover {
+  background: rgba(245, 245, 245, 0.344); 
+  transition: all .4s ease;
 }
 .square-first .square:nth-child(1) {
   border-top: none;
@@ -75,28 +88,29 @@ body {
   display: table;
 }
 .status {
-  margin-top: 20px;
+  margin-top: 30px;
   color: whitesmoke;
   text-shadow: 1px 1px 4px #343434;
   font-size: 30px;
   font-weight: bold;
-
 }
 .jump-to {
   margin-top: 5px;
-  text-align: left;
+  text-align: center;
 }
+
 .jump-to > a {
   background: transparent; 
   border-bottom: 1px solid transparent;
-  color: #343434;
   cursor: pointer;
   transition: all .7s ease;
+
 }
 .jump-to > a:hover {
-  border-bottom: 1px solid #708090;
+  color: blue;
+  border-bottom: 1px solid blue;
   transition: all .7s ease;
-  color: #708090;
+  font-size: 17px;
 }
 .reset-button {
   margin-top: 20px;
@@ -115,4 +129,37 @@ body {
   background: rgba(245, 245, 245, 0.344); 
   transition: all .4s ease;
   font-size: 16px;
+}
+.game {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: space-evenly;
+}
+.game-info {
+  max-width: 250px;
+  height: auto;
+  margin-left: 50px;
+  background-color: rgba(245, 245, 245, 0.642);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+.game-info div {
+  text-align: center;
+  width: 250px;
+}
+.game-info p {
+  height: 20px;
+}
+footer {
+  width: 100svw;
+  height: auto;
+  text-align: left;
+  font-family: 'Borel', cursive;
+  font-size: 13x;
+  color: #708090;
+  margin-top: 30px;
 }
