@@ -18,7 +18,11 @@ body {
   height: 100svh;
   width: 100svw;
 }
-
+.board-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .square {
   background: inherit;
   color: #ffffffc4;
