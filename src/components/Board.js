@@ -3,14 +3,19 @@ import { useState } from 'react';
 import Square from "./Square"
 
 export default function Board() {
-
-  // start Lifting state
+  const [xIsNext, setXIsNext] = useState(true);
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick(i) {
-    const nextSquares = squares.slice();  // creates a copy of array
-    nextSquares[i] = "X";                 // updates the nextSquares array to add X to the first ([0] index) square
-    setSquares(nextSquares);              // the state of the component has changed
+    // check to see if the square already has a X or an O
+    if (squares[i]) {
+      return;
+    }
+    // if yes, you won't pass to go on by the code 
+    const nextSquares = squares.slice();  
+    nextSquares[i] = xIsNext ? 'X' : 'O';
+    setSquares(nextSquares);
+    setXIsNext(!xIsNext);
   }
 
   return (
