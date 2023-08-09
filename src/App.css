@@ -6,6 +6,7 @@ body {
   font-family: sans-serif;
   margin: 20px;
   padding: 0;
+  background-color: #7FFFD4;
 }
 
 .App {
@@ -18,3 +19,22 @@ body {
   width: 100svw;
 }
 
+.square {
+  background: inherit;
+  color: #ffffffc4;
+  border: 3px solid #5edab1c2;
+  float: left;
+  font-size: 64px;
+  font-weight: bold;
+  width: 90px;
+  height: 90px;
+}
+.board {
+  width: 275px;
+  height: 275px;
+ }
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}

@@ -1,11 +1,22 @@
-// defines a function called Square
+import { useState } from 'react';
 
-// The export JS keyword makes this function accessible outside of this file
-// The default keyword tells other files using your code that it’s the main function in your file.
-
+// a prop called value
 export default function Square() {
+
+  // a function used to change the value
+  // null as the initial value
+  const [value, setValue] = useState(null); 
+
+  function handleClick() {
+    setValue('X');
+  }
+  // render the JavaScript variable called value
   return (
-  // <button> is a JSX element (a combination of JavaScript code and HTML tags )
-    <button className="square">X</button>
-  )
+        <button 
+            className="square"
+            onClick={handleClick}
+            >
+            {value}
+        </button>
+        );
 }
