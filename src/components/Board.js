@@ -16,7 +16,8 @@ export default function Board() {
   return (
     <div className="board">
       <div className="board-row">
-        {/* passed the value prop to each Square component  */}
+                {/* when you clicked on the Square the value prop of the Square component 
+        with index 0 change from null to X.  */}
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} /> 
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
         <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
