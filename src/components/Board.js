@@ -5,11 +5,10 @@ import Square from "./Square"
 export default function Board({ xIsNext, squares, onPlay }) {
 
   function handleClick(i) {
-    // check to see if the square already has a X or an O and check by the winner
     if (squares[i]  || calculateWinner(squares)) {
       return;
     }
-    // if yes, you won't pass to go on by the code 
+
     const nextSquares = squares.slice();  
     nextSquares[i] = xIsNext ? 'X' : 'O';
     onPlay(nextSquares);
