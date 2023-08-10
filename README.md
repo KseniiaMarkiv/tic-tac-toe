@@ -19,3 +19,4 @@ export default...
 
 **&#10003;**	Perform some style;
 
+![Link](https://kseniiamarkiv.github.io/tic-tac-toe/tic-tac-toe.png)
