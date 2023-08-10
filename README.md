@@ -2,6 +2,9 @@
 
 Build the hackajob challenge by React
 
+- Challenge type: Project Practice;
+- Experience level: Intermediate;
+
 **&#10003;**	Determined main components which will be built;
 
 - Square – where are places for X, O.
