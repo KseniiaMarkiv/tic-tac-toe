@@ -1,5 +1,8 @@
 # Tic-Tac-Toe small game
-
+________________________________________________________
+[![](https://img.shields.io/badge/Click_me_&#10138;-yellow?style=for-the-badge)](https://kseniiamarkiv.github.io/tic-tac-toe/)
+*the link to check the performed project online*
+_____________________________________________________
 Build the hackajob challenge by React
 
 - Challenge type: Project Practice;
